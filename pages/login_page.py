@@ -7,6 +7,7 @@ class LoginPage(BasePage):
     USER_INPUT = '//input[@id="userName"]'
     PASS_INPUT = '//input[@id="password"]'
     LOGIN_BUTTON = '//button[@id="login"]'
+    INVALID_CREDENTIALS_ERROR = '//p[@id="name"]'
 
    # Actions
     def fill_user_input(self, user):
@@ -22,6 +23,11 @@ class LoginPage(BasePage):
         self.driver.find_element(By.XPATH, self.LOGIN_BUTTON).click()
 
     # validations
+    def validate_invalid_credentials_error(self):
+        self.wait_for_elem(self.INVALID_CREDENTIALS_ERROR)
+        expected = 'Invalid username or password!'
+        actual = self.driver.find_element(By.XPATH, self.INVALID_CREDENTIALS_ERROR).text
+        self.assertEqual(expected, actual, 'Error message is incorrect')
 
 
 
