@@ -1,43 +1,68 @@
-BDD Automation Framework with Python & Behave
-Acest proiect reprezintă un framework de testare automată construit folosind Python și Behave, implementând metodologia BDD (Behavior Driven Development) și design pattern-ul Page Object Model (POM).
+# 🚀 BDD Automation Framework | Python & Selenium
 
-🚀 Tehnologii Utilizate
-• Limbaj: Python 3.12
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge\&logo=python\&logoColor=ffdd54)
+![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge\&logo=Selenium\&logoColor=white)
+![Behave](https://img.shields.io/badge/Behave-BDD-blue?style=for-the-badge)
+![UI/UX](https://img.shields.io/badge/UI/UX-Designer-orange?style=for-the-badge\&logo=figma)
 
-• Framework BDD: Behave (Gherkin)
+Acest proiect reprezintă un framework de testare automată profesional, construit pentru a demonstra bunele practici în **QA Automation**. Folosește metodologia **BDD (Behavior Driven Development)** pentru a asigura transparența testelor între echipa tehnică și stakeholderi.
 
-• Automatizare Browser: Selenium WebDriver
+---
 
-• Arhitectură: Page Object Model (POM)
+## 🏗️ Arhitectură: Page Object Model (POM)
 
-📂 Structura Proiectului
-• `features/` - Conține scenariile de testare scrise în format Gherkin (`.feature`).
+Framework-ul este structurat modular pentru a facilita mentenanța și scalabilitatea:
 
-• `pages/` - Conține clasele de tip Page Object pentru incapsularea selectorilor și a logicii paginilor.
+| Componentă   | Locație      | Descriere                                                              |
+| :----------- | :----------- | :--------------------------------------------------------------------- |
+| **Features** | `features/`  | Scenarii Gherkin pentru Login și Books Management.                     |
+| **Pages**    | `pages/`     | Încapsularea selectorilor și a logicii paginilor (Login, Home, Books). |
+| **Steps**    | `steps/`     | Maparea pașilor din feature files către funcții Python.                |
+| **Browser**  | `browser.py` | Gestionarea instanței de Selenium WebDriver.                           |
+| **Context**  | `context.py` | Obiectul global pentru partajarea datelor în timpul rulării.           |
 
-• `steps/` - Implementarea pașilor definiți în fișierele feature.
+---
 
-• `browser.py` - Gestionarea instanței de browser.
+## 🛠️ Tehnologii și Unelte
 
-• `behave.ini` - Fișierul de configurare pentru Behave.
+* **Limbaj:** Python 3.12
+* **Framework BDD:** Behave
+* **Automatizare:** Selenium WebDriver
+* **Pattern:** Page Object Model (POM)
+* **IDE:** PyCharm
 
-🛠️ Instalare și Rulare
-1. Instalează dependențele necesare:
+---
 
+## 🚀 Instalare și Rulare Rapidă
+
+### 1. Clonarea proiectului
+
+```bash
+git clone https://github.com/SanduAndreea22/BDD_AUTO_PY.git
+cd BDD_AUTO_PY
 ```
 
+### 2. Instalarea dependențelor
+
+```bash
 pip install behave selenium
-
 ```
 
-2. Execută toate testele:
+### 3. Executarea testelor
 
-```
-
+```bash
 behave
-
 ```
 
+---
 
-📝 Detalii Proiect
-Proiectul include teste automate pentru funcționalitățile de Login și Gestiune Cărți, asigurând o acoperire solidă a fluxurilor principale de utilizator.
+## 📝 Scenarii de Testare Implementate
+
+* **Autentificare:** Verificarea fluxului de login cu diverse seturi de date.
+* **Catalog Produse:** Navigarea și validarea elementelor din secțiunea de cărți.
+* **UI Checks:** Testarea elementelor de interfață (Sidebar, Header) pentru integritate.
+
+---
+
+
+⭐ *Dacă acest framework ți-a fost util, nu uita să îi dai un Star pe GitHub!*
